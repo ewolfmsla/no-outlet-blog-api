@@ -64,15 +64,12 @@ const signIn = async ({ email, password }) => {
 };
 
 const getUser = (req) => {
-  //   console.log(req?.headers?.authorization);
   const auth = req?.headers?.authorization;
   if (auth) {
     try {
       // Bearer <token>
       const token = auth.slice(7, auth.length);
-      console.log(token);
       const verified = jwt.verify(token, JWT_SECRET);
-      console.log('verified: ', verified);
       return verified.user;
     } catch {
       throw new AuthError('Session invalid', 401);

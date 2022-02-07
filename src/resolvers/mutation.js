@@ -3,7 +3,7 @@ const { signIn, signUp } = require('../auth/index');
 const { deletePost, newPost, updatePost } = require('./context/posts');
 const { hideComment, newComment } = require('./context/comments');
 
-mongoose.set('debug', true);
+// mongoose.set('debug', true);
 
 module.exports = {
   signUp: async (_, { email, username, password }) =>
