@@ -1,0 +1,44 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API for Blog project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js &",
+    "stop": "pgrep node | xargs kill",
+    "lint": "eslint . --fix"
+  },
+  "author": "Eric Wolf",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-core": "^3.6.2",
+    "apollo-server-errors": "^3.3.1",
+    "apollo-server-express": "^3.6.2",
+    "bcrypt": "^5.0.1",
+    "connect-livereload": "^0.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-validation-complexity": "^0.4.2",
+    "helmet": "^5.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "livereload": "^0.9.3",
+    "marked": "^4.0.12",
+    "md5": "^2.3.0",
+    "mongoose": "^6.1.8",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/eslint-parser": "^7.16.5",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "faker": "^6.6.6",
+    "node-fetch": "^3.2.0"
+  }
+}
